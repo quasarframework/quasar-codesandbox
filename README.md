@@ -3,7 +3,7 @@
 # Quasar App Codesandbox Template
 > A Template for using Quasar on Codesandbox.io.
 
-### ADD IMAGE HERE ###
+![Codesanbox Entry Server Screen](https://cdn.quasar-framework.org/codesandbox/codesandbox-entry.jpg)
 
 This is the template used for the server template found on [Codesandbox.io](https://codesandbox.io). The template builds a full application running in the development server mode. With the app running in Codesandbox, you can work with a FULL Quasar application and not just the UMD version, as is the case with Codepen and JSFiddle.  
 
@@ -19,7 +19,7 @@ Once you've registered to Codesandbox, to start the template, simply click on "C
 
 Then click on `SERVER TEMPLATES` and then on the `Quasar` button. 
 
-### ADD IMAGE HERE ###
+![Codesanbox Start Server Screen](https://cdn.quasar-framework.org/codesandbox/codesandbox-start.jpg)
 
 The server and container will start automatically. Once you make any change and save it, Codesandbox will automatically fork the sandbox for you. 
 
@@ -49,7 +49,7 @@ If you would like to work with the PWA or SSR versions of Quasar, please make th
 
 Once you've changed the the `start` entry of `scripts` in the `package.json` file accordingly, you simply need to restart the container's server. 
 
-### ADD IMAGE HERE ###
+![Codesanbox Restart Server Screen](https://cdn.quasar-framework.org/codesandbox/codesandbox-restart-server.jpg)
 
 Once that is done, it should take a minute or so to reload the application in the new mode. 
 
