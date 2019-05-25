@@ -56,8 +56,6 @@ Once that is done, it should take a minute or so to reload the application in th
 ## Quasar Repositories
 
 * [Quasar Framework](https://github.com/quasarframework/quasar)
-* [Quasar CLI](https://github.com/quasarframework/quasar-cli)
-* [Quasar Play App](https://github.com/quasarframework/quasar-play)
 
 ## Contributing
 
