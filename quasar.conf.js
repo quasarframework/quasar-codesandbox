@@ -12,41 +12,20 @@ module.exports = function (ctx) {
     ],
 
     extras: [
-      'roboto-font',
-      'material-icons' // optional, you are not bound to it
       // 'ionicons-v4',
       // 'mdi-v3',
       // 'fontawesome-v5',
-      // 'eva-icons'
+      // 'eva-icons',
+      // 'themify',
+
+      'roboto-font', // optional, you are not bound to it
+      'material-icons' // optional, you are not bound to it
     ],
 
     framework: {
-      // all: true, // --- includes everything; for dev only!
-
-      components: [
-        'QLayout',
-        'QHeader',
-        'QDrawer',
-        'QPageContainer',
-        'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
-        'QList',
-        'QItem',
-        'QItemSection',
-        'QItemLabel'
-      ],
-
-      directives: [
-        'Ripple'
-      ],
-
-      // Quasar plugins
-      plugins: [
-        'Notify'
-      ]
+      // this is here for convenience,
+      // but NOT recommended in production!
+      all: true,
 
       // iconSet: 'ionicons-v4'
       // lang: 'de' // Quasar language
@@ -56,18 +35,10 @@ module.exports = function (ctx) {
 
     build: {
       scopeHoisting: true,
-      // vueRouterMode: 'history',
-      // vueCompiler: true,
-      // gzip: true,
-      // analyze: true,
-      // extractCSS: false,
-      extendWebpack (cfg) {
-      }
+      vueRouterMode: 'history'
     },
 
     devServer: {
-      // https: true,
-      // port: 8080,
       open: false, // leave this here for Codesandbox to work
       public: 'http://0.0.0.0' // leave this here for Codesandbox to work
     },
@@ -117,38 +88,6 @@ module.exports = function (ctx) {
             'type': 'image/png'
           }
         ]
-      }
-    },
-
-    cordova: {
-      // id: 'org.cordova.quasar.app'
-    },
-
-    electron: {
-      // bundler: 'builder', // or 'packager'
-
-      extendWebpack (cfg) {
-        // do something with Electron main process Webpack cfg
-        // chainWebpack also available besides this extendWebpack
-      },
-
-      packager: {
-        // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
-
-        // OS X / Mac App Store
-        // appBundleId: '',
-        // appCategoryType: '',
-        // osxSign: '',
-        // protocol: 'myapp://path',
-
-        // Window only
-        // win32metadata: { ... }
-      },
-
-      builder: {
-        // https://www.electron.build/configuration/configuration
-
-        // appId: 'quasar-app'
       }
     }
   }
