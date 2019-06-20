@@ -9,7 +9,7 @@ This is the template used for the server template found on [Codesandbox.io](http
 
 ## Purpose
 
-The purpose of this template on Codesandbox is so developers can create more intricate examples of their code, like when using Axios, Vuex or other Vue plugins. These examples can then be used for both the training and/ or teaching of other devs on using Quasar and also for troubleshooting problems with the core dev team of Quasar.
+The purpose of this template on Codesandbox is so developers can create more intricate examples of their code. These examples can then be used for both the training and/ or teaching of other devs on using Quasar and also for troubleshooting problems with the core dev team of Quasar.
 
 ## Usage
 
@@ -60,20 +60,6 @@ Once that is done, it should take a minute or so to reload the application in th
 ## Contributing
 
 We're excited if you want to contribute to Quasar under any form (report bugs, write a plugin, fix an issue, write a new feature, help with the documentation). Any help is much appreciated!
-
-### Issue Reporting Guidelines
-
-**Please use the appropriate Github repo to report issues. See "Related Components" above.** For example, a bug related to CLI should be reported to the CLI repo, one related to build issues to Quasar Framework Templates repo and so on. If you find an issue with this repo, report it in the issues here.
-
-- The issue list of the repository is **exclusively** for bug reports and feature requests. For anything else please use the [Community Forum](https://forum.quasar.dev).
-
-- Try to search for your issue, it may have already been fixed in the development branch or it may have a resolution.
-
-- Check if the issue is reproducible with the latest stable version of Quasar. If you are using a pre-release, please indicate the specific version you are using.
-
-- It is **required** that you clearly describe the steps necessary to reproduce the issue you are running into. Issues with no clear repro steps will not be triaged. If an issue labeled "need repro" receives no further input from the issue author for more than 5 days, it will be closed.
-
-- If your issue is resolved but still open, don’t hesitate to close it. In case you found a solution by yourself, it could be helpful to explain how you fixed it.
 
 ## License
 
