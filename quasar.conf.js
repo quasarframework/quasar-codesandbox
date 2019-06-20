@@ -68,7 +68,8 @@ module.exports = function (ctx) {
     devServer: {
       // https: true,
       // port: 8080,
-      open: false // opens browser window automatically
+      open: false, // opens browser window automatically
+      public: 'http://0.0.0.0'
     },
 
     // animations: 'all' --- includes all animations
