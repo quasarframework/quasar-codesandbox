@@ -1,7 +1,7 @@
 {
-  "name": "quasar",
+  "name": "proonlyecommerce",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
+  "description": "",
   "productName": "Quasar App",
   "cordovaId": "org.cordova.quasar.app",
   "author": "add.your.email@here.com",
