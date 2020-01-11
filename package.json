@@ -1,5 +1,5 @@
 {
-  "name": "quasar",
+  "name": "codesandbox-app",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
   "productName": "Quasar App",
@@ -25,6 +25,5 @@
   },
   "browserslist": [
     "last 1 version, not dead, ie >= 11"
-  ],
-  "keywords": []
+  ]
 }
