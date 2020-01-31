@@ -19,9 +19,9 @@
     "@quasar/app": "^1.0.0"
   },
   "engines": {
-    "node": ">= 10.18.1",
+    "node": ">= 10.17.0",
     "npm": ">= 6.13.4",
-    "yarn": ">= 1.21.1"
+    "yarn": ">= 1.19.1"
   },
   "browserslist": [
     "last 1 version, not dead, ie >= 11"
