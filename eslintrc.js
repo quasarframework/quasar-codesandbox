@@ -14,15 +14,7 @@ module.exports = {
     // https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
     'plugin:vue/essential',
-    {{#if_eq lintConfig "standard"}}
     '@vue/standard'
-    {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
-    'airbnb-base'
-    {{/if_eq}}
-    {{#if_eq lintConfig "prettier"}}
-    '@vue/prettier'
-    {{/if_eq}}
   ],
 
   // required to lint *.vue files
@@ -41,7 +33,6 @@ module.exports = {
 
   // add your custom rules here
   rules: {
-    {{#if_eq lintConfig "standard"}}
     // allow async-await
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
@@ -56,20 +47,6 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
-    {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
-    'no-param-reassign': 'off',
-
-    'import/first': 'off',
-    'import/named': 'error',
-    'import/namespace': 'error',
-    'import/default': 'error',
-    'import/export': 'error',
-    'import/extensions': 'off',
-    'import/no-unresolved': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/prefer-default-export': 'off',
-    {{/if_eq}}
     'prefer-promise-reject-errors': 'off',
 
     // allow debugger during development only
