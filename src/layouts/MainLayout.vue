@@ -1,97 +1,126 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="hHh lpR fFf">
+    <q-header elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          icon="menu"
-          aria-label="Menu"
-        />
-
         <q-toolbar-title>
-          Quasar App
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          </q-avatar>Title
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn dense flat round icon="menu" @click="right = !right"/>
       </q-toolbar>
+
+      <q-tabs align="left">
+        <q-route-tab to="../pages/new.vue" label="Page One"/>
+        <q-route-tab to="/pages/pagina" label="Page Two"/>
+        <q-route-tab to="pagina.vue" label="Page Three"/>
+      </q-tabs>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label header class="text-grey-8">Essential Links</q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+    <q-drawer show-if-above v-model="right" side="right" bordered>
+      <!-- drawer content -->
+      <div class="q-pa-md" style="max-width: 350px">
+        <q-list bordered>
+          <q-item clickable v-ripple>
+            <q-item-section>Icon as avatar</q-item-section>
+            <q-item-section avatar>
+              <q-icon color="primary" name="bluetooth"/>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Avatar-type icon</q-item-section>
+            <q-item-section avatar>
+              <q-avatar color="teal" text-color="white" icon="bluetooth"/>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Rounded avatar-type icon</q-item-section>
+            <q-item-section avatar>
+              <q-avatar rounded color="purple" text-color="white" icon="bluetooth"/>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Letter avatar-type</q-item-section>
+            <q-item-section avatar>
+              <q-avatar color="primary" text-color="white">R</q-avatar>
+            </q-item-section>
+          </q-item>
+
+          <q-separator/>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Image avatar</q-item-section>
+            <q-item-section avatar>
+              <q-avatar>
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Image square avatar</q-item-section>
+            <q-item-section avatar>
+              <q-avatar square>
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Image rounded avatar</q-item-section>
+            <q-item-section avatar>
+              <q-avatar rounded>
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+            </q-item-section>
+          </q-item>
+
+          <q-separator/>
+
+          <q-item clickable v-ripple>
+            <q-item-section>List item</q-item-section>
+            <q-item-section avatar>
+              <q-avatar rounded>
+                <img src="https://cdn.quasar.dev/img/mountains.jpg">
+              </q-avatar>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>List item</q-item-section>
+            <q-item-section thumbnail>
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view/>
     </q-page-container>
+
+    <q-footer reveal elevated class="bg-grey-8 text-white">
+      <q-toolbar>
+        <q-toolbar-title>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          </q-avatar>Title
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink'
-
 export default {
-  name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
-  data () {
+  data() {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: [
-        {
-          title: 'Docs',
-          caption: 'quasar.dev',
-          icon: 'school',
-          link: 'https://quasar.dev'
-        },
-        {
-          title: 'Github',
-          caption: 'github.com/quasarframework',
-          icon: 'code',
-          link: 'https://github.com/quasarframework'
-        },
-        {
-          title: 'Discord Chat Channel',
-          caption: 'chat.quasar.dev',
-          icon: 'chat',
-          link: 'https://chat.quasar.dev'
-        },
-        {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
-        },
-        {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: 'Facebook',
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
-        }
-      ]
+      right: false
     }
   }
 }
