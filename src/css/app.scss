@@ -1,0 +1,181 @@
+// app global css in SCSS form
+.d-flex--stretch {
+    align-items: stretch;
+}
+
+.dark-theme {
+    --main-color: #515585;
+    .header {
+        background-color: var(--main-color);
+
+       .tool-bar-btn {
+           display: none;
+       }
+        @media screen and (max-width: 768px) {
+            .tool-bar-btn {
+                display: block;
+            }
+        }
+    }
+    .drawer-main {
+        color: #fff;
+        overflow-x: hidden;
+        .selected {
+            background-color: #8e92be;
+        }
+    }
+    .drawer-sub {
+        background-color: #424242 ;
+        color: #fff;
+        min-width: 295px;
+        .drawer-sub-header {
+            background-color: #858282 ;
+            border-bottom: 1px solid;
+        }
+        .drawer-sub-recent {
+            .banner {
+                background-color: #424242 ;
+            }
+
+        }
+        .drawer-sub-contact {
+            background-color: #424242 ;
+            .banner {
+                background-color: #424242 ;
+            }
+            .search-input.q-field--outlined.q-field--focused {
+              
+                .q-field__control:after {
+                    border-color: white ;
+                }
+            }
+            .search-input.q-field--outlined {
+                .q-field__control:before {
+                    border-color: white ;
+                }
+            }
+            .search-input {
+                .search-icon {
+                    color: whitesmoke;
+                }
+                .q-field__native {
+                    color: whitesmoke;
+                }
+            }
+            .slider-item {
+                background-color: #424242 ;
+            }
+        }
+        
+        
+    }
+    .chat-content {
+        background-color: #222831;
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            .chat-header {
+                border-bottom: 1px solid black;
+                .banner {
+                    background-color: #222831;
+                }
+            }
+            .chat-content {
+                flex-grow: 3;
+                .message {
+                    background-color: #222831;
+                }
+                .q-message {
+                    .q-message-container {
+                        .q-message-icons {
+                            margin-top: 10px;
+                            margin-left: 10px;
+                            margin-right: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            p {
+                                font-size: 60px;
+                                display: inline-flex;
+                                justify-content: flex-end;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+            .chat-input {
+                position: relative;
+                border-top: 1px solid black;
+
+                .power-input {
+                    flex-grow: 1;
+                    padding: 3px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    height: 40px;
+                    overflow: auto;
+                    -webkit-appearance: textfield;
+                    appearance: textfield;
+                }
+                .q-field--standout.q-field--dark.q-field--focused .q-field__control {
+                    background: rgba(255, 255, 255, 0.07) !important;
+                }
+
+                .icons-modal {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 20px;
+                    width: 345px;
+                    height: 300px;
+                    .q-card__section {
+                        height: 255px;
+                        width: 100%;
+                        .q-scrollarea {
+                            height: 100%;
+                            .icon-container {
+                                p {
+                                    cursor: pointer;
+                                    font-size: 36px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+
+    .account-form {
+        .avata-container {
+            height: 100px;
+            width: 100px;
+            position: relative;
+            border-radius: 50px;
+            background-color: whitesmoke;
+            .avata-img {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                border-radius: 50%;
+            }
+            .avata-input {
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+            }
+        }
+    }
+    
+}
+
+.align-center {
+    align-items: center;
+}
+.align-items-stretch {
+    align-items: stretch;
+}
+.d-flex--grow {
+    flex-grow: 1;
+}
