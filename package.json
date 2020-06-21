@@ -12,18 +12,16 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "quasar": "^1.0.0"
+    "@quasar/extras": "1.8.2",
+    "quasar": "1.12.7"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0"
+    "@quasar/app": "^1.9.6"
   },
   "engines": {
     "node": ">= 10.17.0",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.19.1"
   },
-  "browserslist": [
-    "last 1 version, not dead, ie >= 11"
-  ]
+  "browserslist": ["last 1 version, not dead, ie >= 11"]
 }
