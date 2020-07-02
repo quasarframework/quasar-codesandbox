@@ -1,7 +1,7 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
-module.exports = function (ctx) {
+module.exports = function(ctx) {
   return {
     // https://quasar.dev/quasar-cli/prefetch-feature
     // preFetch: true,
@@ -9,13 +9,10 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
-    boot: [
-    ],
+    boot: ['router-auth.js'],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
-    css: [
-      'app.sass'
-    ],
+    css: ['app.sass'],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -28,12 +25,12 @@ module.exports = function (ctx) {
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
       'roboto-font', // optional, you are not bound to it
-      'material-icons', // optional, you are not bound to it
+      'material-icons' // optional, you are not bound to it
     ],
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: 'history', // available values: 'hash', 'history'
+      vueRouterMode: 'history' // available values: 'hash', 'history'
 
       // transpile: false,
 
@@ -73,7 +70,7 @@ module.exports = function (ctx) {
       importStrategy: 'auto',
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Notify', 'LocalStorage', 'Loading']
     },
 
     // animations: 'all', // --- includes all animations
@@ -99,29 +96,29 @@ module.exports = function (ctx) {
         theme_color: '#027be3',
         icons: [
           {
-            'src': 'icons/icon-128x128.png',
-            'sizes': '128x128',
-            'type': 'image/png'
+            src: 'icons/icon-128x128.png',
+            sizes: '128x128',
+            type: 'image/png'
           },
           {
-            'src': 'icons/icon-192x192.png',
-            'sizes': '192x192',
-            'type': 'image/png'
+            src: 'icons/icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
           },
           {
-            'src': 'icons/icon-256x256.png',
-            'sizes': '256x256',
-            'type': 'image/png'
+            src: 'icons/icon-256x256.png',
+            sizes: '256x256',
+            type: 'image/png'
           },
           {
-            'src': 'icons/icon-384x384.png',
-            'sizes': '384x384',
-            'type': 'image/png'
+            src: 'icons/icon-384x384.png',
+            sizes: '384x384',
+            type: 'image/png'
           },
           {
-            'src': 'icons/icon-512x512.png',
-            'sizes': '512x512',
-            'type': 'image/png'
+            src: 'icons/icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
         ]
       }

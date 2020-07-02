@@ -1,0 +1,160 @@
+WORKING ON:
+
+NEED TO FIX FIRST:
+MIGHT BE FIXED NOW: added mapGetters to app.vue and index.vue and to store-auth.vue and local storage and not working trying to load user from scratch
+1) Make add book, chapter, and scene actually add document to db now (and update order in parent doc)
+2) When above is done, finish deleting gems (part-way done with delete scene)
+  Note: 2) above, should first delete from database, (in both doc, and order in doc's parent)
+
+DONE! NEXT: after testing, change users to use u-id from authentication instead of hearth_id. hearth_id can remain a field in each users document, as well as the app this is. 
+
+NEXT: work on delete updating database
+  1) DONE! Need to update book in book order and chapter if one is deleted.
+    THIS HAS TO WORK WHETHER OR NOT IT HAS BEEN SAVED
+  2) Need to make sure is that a new user starts with a blank slate and everything works with adding things
+
+NEXT: DONE make sure dragging is updating new order on server
+      NOTE: This just sets chapter and book to changed, it also sets user bookOrderArrayChanged to true
+      So this will happen on save, and be sure to also update user if bookOrderArrayChanged is true
+
+NEXT: DONE work on save - note: planning to change color of BK2 etc font if needs to be saved
+  Have any scene chapter or book change color of Bk,Cp,Sc,etc based on set 'changed', set all its parents also
+  Note: plan is to make 'changed' property only track if self or any children gems have been changed so can change color of Bk etc in the outline
+      This will also make it quicker to see which gems have changes by checking 'changed' first
+      Also, if only 1 thing has changed in the doc (order, title, text, notes, summary), then just update the doc
+      If more than one thing has changed, then just set the doc with one write command
+      Note All gems with a change  should be it's own batch write, this way order and subcollections will always match
+  MIGHT BE DONE> Make sure book_order updated in user file if bookOrderArrayChanged = true
+  MIGHT BE DONE> Note: up-to-date book order is found in data() this.bookOrderArrayChanged = true
+
+NEXT: Work on rules so only user has authorized access
+
+NEXT: download, save, update, and delete Things
+
+DONE! NEXT Go through created() and make sure load book correctly,
+make sure all loaded and new book properties are set correctly
+
+DONE! NEXT note that we have a pointer to chapter order and scene order
+already for when we download the chapters and the scenes,
+For chapters: just look at the chapterOrder property of the book
+For scenes: just look at the sceneOrder property of the chapter
+
+DONE! NEXT might be able to get rid of properties hasChapters and hasScenes
+by just checking if chapters and scenes arrays are empty or not.
+
+NEXT: Add where created hook checks each book to see if it has chapters,
+if it does, then add the '+' icon (used to be down chevron) to see chapters
+
+NEXT: add new chapter and scene ids to order arrays
+  1) DONE When newly added 
+  2) DONE reorder order arrays When order rearranged
+
+NEXT: I THINK DONE fix scrollIntoView for actually adding new books, chapteres, and scene
+it uses, getElementByID and i not sure if an id is getting set correctly
+
+NEXT: I THINK DONE add scrollIntoView of gem display when clicking on a gem title 
+
+
+
+FIX: Fix where can enter same category name or same thing name (disallow)
+FIX: Add focus() of inputField for adding new gems, categories, and things.
+
+PLAN: Keep data in data (do not move to vuex)
+Save data to Firebase Firestore, 
+
+  each user gets a collection of books
+    each book has a document plus a collection of chapters
+    each chapter has a document plus a collection of scenes
+    each scene has a document
+    
+    Ech gem doc has: booknum, chapnum, scenenum, key, title, text, summary, notes
+
+  each user gets a collection of categories
+    each category has a colllection of things
+      each thing has a title and a description
+    
+  if they create a new category, it gets placed in  the category collection
+    but has no collection of things yet (or an empty collection of things)
+
+Each time a new gem, or category, or thing is created, it is written
+to the proper collection. 
+Every time a title (gem, category, or thing) is edited, it is updated in table
+Every time a title (gem, category, or thing) is delted, it is deleted from the table
+
+Every time a description, text, summary, or notes is edited, an 'edited' flag is set
+for this gem or thing. 
+If a save is performed (auto or manual), gems and things are scanned through,
+and all of those with an edited flag get written to the Cloud.
+
+On startup, perhaps avoid downloading everything from database.
+Otherwise, all data is pulled from user's tables. 
+Or, only [gems: id, title, bk#, cp#, sn#], [category titles], and [thing titles] are pulled
+  If user clicks on gem title, then summary, text, and notes gets downloaded
+  If user clicks on a category, thing names associated get pulled.
+  If user clicks on thing name, thing description gets pulled and displayed. 
+
+TIMELINE WIDTH
+ might give timeline a max-width: 400px or something
+ or make it a sub-grid with Titles on left and buttons on right. 
+   Here might give titles column a fixed width.
+ might also put all time line icons on the left side.
+
+DRAGGING ITEMS IN LIST
+https://codepen.io/abhaywawale/pen/PaVvyR
+
+
+ADD AND REMOVE FROM LIST
+https://codepen.io/ktsn/pen/vJgYxB
+
+
+When adding book, chap, scene, category, or thing,
+ make the input field the focus....
+
+ make sure when add gem, or category, or thing, that the input field gets focus!!!
+
+work on menu
+work on passing props, may be customize notes,
+makybe make unlimited nesting 
+or make nesting max of 5 levels deep
+and , make custom headings for each listing
+i.e. Let them set variables and these variables will
+be displayed instead of listing Bk1, Cp1, and Scn1
+
+axios, php, mySQL 
+https://www.techiediaries.com/vuejs-php-mysql-rest-crud-api-tutorial/
+https://makitweb.com/insert-update-delete-records-from-mysql-with-vue-js/
+
+Consider reverse color mode that is a reverse of eac color scheme 
+    (dark on light instead of light on dark)
+
+POSSIBLE SAVE AND PRICING MODEL
+Have all fields flagged for updateNeeded if a keyup is detected.
+When they click save, all these fields are uploaded to net
+If they have paid for autosave, it kicks in depending on tier.
+The lower the tier, the lower the price point.
+TIER 1 - $1 - saves every two minutes.
+TIER 2 - $2 - saves every one minute.
+TIER 3 - $3 - saves every 30 secs.
+
+vue color change on codesandboxio https://codesandbox.io/s/vuedose-84yg5 
+color change with CSS:   https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+color schemes:   https://javisperez.github.io/tailwindcolorshades/#/?Valencia=e24e42&tv=1
+
+make hover on scene title also call focus() on the title
+help here: https://michaelnthiessen.com/hover-in-vue/
+
+  this codepen shows how to hook into dragstart, dragend etc.
+  https://codepen.io/pasoevi/pen/ooOrpo
+
+use info here https://alligator.io/vuejs/drag-and-drop-vue-draggable/
+to figure out how to turn off slide transition using startDrag and stopDrag hooks
+
+  Add draggable from vuedraggable
+  https://alligator.io/vuejs/drag-and-drop-vue-draggable/
+
+vuedraggable on github:
+https://github.com/SortableJS/Sortable#event-object-demo
+
+might also try this:
+    v-for-draggable
+  https://github.com/SortableJS/Vue.Draggable/blob/master/documentation/Vue.draggable.for.ReadME.md

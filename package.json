@@ -13,7 +13,9 @@
   "dependencies": {
     "@quasar/extras": "^1.8.2",
     "core-js": "^3.6.5",
-    "quasar": "^1.12.7"
+    "firebase": "7.15.5",
+    "quasar": "^1.12.7",
+    "vuedraggable": "2.23.2"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0"
