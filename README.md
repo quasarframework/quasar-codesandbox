@@ -3,6 +3,7 @@
 **Click the "Fork" button to get started!**
 
 # Quasar App Codesandbox Template
+
 > A Template for using Quasar on Codesandbox.io.
 
 ![Codesanbox Entry Server Screen](https://cdn.quasar.dev/codesandbox/codesandbox-entry.jpg)
@@ -22,12 +23,13 @@ Once you've registered to Codesandbox, to start the template, simply click on "C
 Then click on `SERVER TEMPLATES` and then on the `Quasar` button.
 
 ![Codesanbox Start Server Screen](https://cdn.quasar.dev/codesandbox/codesandbox-start.jpg)
+![Codesanbox Start Server Screen](https://cdn.quasar.dev/codesandbox/codesandbox-start.jpg)
 
 The server and container will start automatically. Once you make any change and save it, Codesandbox will automatically fork the sandbox for you.
 
 ## Different Modes
 
-This template currently loads a *SPA* application mode of Quasar.
+This template currently loads a _SPA_ application mode of Quasar.
 
 If you would like to work with the PWA or SSR versions of Quasar, please make the following changes to the `start` script entries in the `package.json`.
 
@@ -57,7 +59,7 @@ Once that is done, it should take a minute or so to reload the application in th
 
 ## Quasar Repositories
 
-* [Quasar Framework](https://github.com/quasarframework/quasar)
+- [Quasar Framework](https://github.com/quasarframework/quasar)
 
 ## Contributing
 
