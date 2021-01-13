@@ -13,7 +13,11 @@
   "dependencies": {
     "@quasar/extras": "^1.8.2",
     "core-js": "^3.6.5",
-    "quasar": "^1.12.7"
+    "firebase": "8.2.1",
+    "moment": "2.29.1",
+    "object-hash": "2.1.1",
+    "quasar": "^1.12.7",
+    "vuefire": "2.2.5"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0"
