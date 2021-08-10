@@ -13,10 +13,22 @@
   "dependencies": {
     "@quasar/extras": "^1.8.2",
     "core-js": "^3.6.5",
-    "quasar": "^1.12.7"
+    "quasar": "^2.0.3",
+    "vuex": "4"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.0"
+    "@babel/eslint-parser": "^7.0.0",
+    "@quasar/app": "^3.0.4",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-quasar": "^1.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "eslint-webpack-plugin": "^2.4.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^6.1.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
