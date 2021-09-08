@@ -11,12 +11,13 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.8.2",
+    "@quasar/extras": "^1.10.12",
     "core-js": "^3.6.5",
-    "quasar": "^1.12.7"
+    "quasar": "^2.0.4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.0"
+    "@quasar/app": "^3.1.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
@@ -30,7 +31,7 @@
     "last 5 Opera versions"
   ],
   "engines": {
-    "node": ">= 10.17.0",
+    "node": ">= 12.22.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.19.1"
   }
