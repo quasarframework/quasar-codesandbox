@@ -8,6 +8,8 @@
 
 /* eslint-env node */
 
+const ESLintPlugin = require('eslint-webpack-plugin')
+
 const { configure } = require('quasar/wrappers')
 
 module.exports = configure(function (ctx) {
@@ -64,8 +66,9 @@ module.exports = configure(function (ctx) {
 
       // https://v2.quasar.dev/quasar-cli/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpack (chain, { isServer, isClient }) {
-        //
+      chainWebpack (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
       }
     },
 
@@ -113,7 +116,8 @@ module.exports = configure(function (ctx) {
       maxAge: 1000 * 60 * 60 * 24 * 30,
 
       chainWebpackWebserver (chain) {
-        //
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: ['js'] }])
       },
 
       middlewares: [
@@ -128,7 +132,8 @@ module.exports = configure(function (ctx) {
       workboxOptions: {}, // only for GenerateSW
 
       chainWebpackCustomSW (chain) {
-        //
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: ['js'] }])
       },
 
       manifest: {
