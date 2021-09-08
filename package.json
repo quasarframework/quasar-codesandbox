@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "A Quasar Framework app",
   "productName": "Quasar App",
-  "cordovaId": "org.cordova.quasar.app",
   "author": "add.your.email@here.com",
   "private": true,
   "scripts": {
@@ -12,16 +11,36 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "1.8.2",
-    "quasar": "1.12.7"
+    "@quasar/extras": "^1.10.12",
+    "core-js": "^3.6.5",
+    "quasar": "^2.0.4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@quasar/app": "^1.9.6"
+    "@babel/eslint-parser": "^7.15.4",
+    "@quasar/app": "^3.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "eslint-webpack-plugin": "^3.0.1"
   },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
   "engines": {
-    "node": ">= 10.17.0",
+    "node": ">= 12.22.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.19.1"
-  },
-  "browserslist": ["last 1 version, not dead, ie >= 11"]
+  }
 }
