@@ -7,9 +7,6 @@
 // https://v2.quasar.dev/quasar-cli/quasar-conf-js
 
 /* eslint-env node */
-
-const ESLintPlugin = require('eslint-webpack-plugin')
-
 const { configure } = require('quasar/wrappers')
 
 module.exports = configure(function (ctx) {
@@ -66,10 +63,7 @@ module.exports = configure(function (ctx) {
 
       // https://v2.quasar.dev/quasar-cli/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpack (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
-      }
+      // chainWebpack(chain) {}
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/quasar-conf-js#property-devserver
@@ -115,10 +109,7 @@ module.exports = configure(function (ctx) {
       // Tell browser when a file from the server should expire from cache (in ms)
       maxAge: 1000 * 60 * 60 * 24 * 30,
 
-      chainWebpackWebserver (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js'] }])
-      },
+      // chainWebpackWebserver (chain) {},
 
       middlewares: [
         ctx.prod ? 'compression' : '',
@@ -131,10 +122,7 @@ module.exports = configure(function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
 
-      chainWebpackCustomSW (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js'] }])
-      },
+      // chainWebpackCustomSW (chain) {},
 
       manifest: {
         // name: 'Quasar App',
