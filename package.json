@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "quasar dev",
-    "post-update": "yarn upgrade --latest",
+    "post-update": "yarn upgrade",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
