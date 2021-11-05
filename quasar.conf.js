@@ -70,7 +70,11 @@ module.exports = configure(function (ctx) {
     devServer: {
       open: false, // leave this here for Codesandbox to work
       client: {
-        webSocketURL: 'http://0.0.0.0' // leave this here for Codesandbox to work
+        // leave this here for Codesandbox to work
+        webSocketURL: {
+          hostname: "0.0.0.0",
+          port: 443
+        }
       }
     },
 
