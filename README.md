@@ -1,8 +1,5 @@
-![Quasar Framework logo](https://cdn.rawgit.com/quasarframework/quasar-art/863c14bd/dist/svg/quasar-logo-full-inline.svg)
-
-**Click the "Fork" button to get started!**
-
-# Quasar App Codesandbox Template
+![image](https://user-images.githubusercontent.com/3314957/140314572-9c26fc82-76b4-44b7-9f16-795da179195c.png)
+# Quasar App Codesandbox Template   
 
 > A Template for using Quasar on Codesandbox.io.
 
