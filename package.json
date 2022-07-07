@@ -1,7 +1,7 @@
 {
-  "name": "quasar",
+  "name": "quasartemplate",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
+  "description": "用于记录quasar中使用的物料",
   "productName": "Quasar App",
   "author": "add.your.email@here.com",
   "private": true,
@@ -36,5 +36,6 @@
     "node": ">= 12.22.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.19.1"
-  }
+  },
+  "keywords": []
 }
