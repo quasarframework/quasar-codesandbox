@@ -4,34 +4,26 @@
   "description": "A Quasar Framework app",
   "productName": "Quasar App",
   "author": "add.your.email@here.com",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "quasar dev",
+    "dev": "quasar dev",
+    "build": "quasar build",
     "post-update": "yarn upgrade",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.11.4",
-    "core-js": "^3.19.1",
-    "quasar": "^2.2.2",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0",
-    "vuex": "^4.0.2"
+    "@quasar/extras": "^1.16.4",
+    "quasar": "^2.16.0",
+    "vue": "^3.4.18",
+    "vue-router": "^4.0.0"
   },
   "devDependencies": {
-    "@quasar/app": "^3.1.0"
+    "@quasar/app-vite": "^2.0.0-beta.12",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.14"
   },
-  "browserslist": [
-    "last 10 Chrome versions",
-    "last 10 Firefox versions",
-    "last 4 Edge versions",
-    "last 7 Safari versions",
-    "last 8 Android versions",
-    "last 8 ChromeAndroid versions",
-    "last 8 FirefoxAndroid versions",
-    "last 10 iOS versions",
-    "last 5 Opera versions"
-  ],
   "engines": {
     "node": ">= 12.22.1",
     "npm": ">= 6.13.4",

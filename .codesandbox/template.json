@@ -1,0 +1,7 @@
+{
+  "title": "Quasar Framework",
+  "description": "Starter template for Quasar Framework",
+  "iconUrl": "https://raw.githubusercontent.com/quasarframework/quasar-codesandbox/refs/heads/master/.codesandbox/icon.png",
+  "tags": ["quasar", "vite", "javascript"],
+  "published": true
+}

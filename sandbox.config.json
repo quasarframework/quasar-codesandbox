@@ -1,6 +1,0 @@
-{
-  "template": "quasar",
-  "container": {
-    "node": "14"
-  }
-}
