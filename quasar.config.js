@@ -75,8 +75,7 @@ export default configure((/* ctx */) => {
        * Leave these here for Codesandbox to work
        */
       open: false,
-      host: '0.0.0.0',
-      port: 443
+      port: 8123
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework

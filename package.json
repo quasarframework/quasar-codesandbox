@@ -8,6 +8,8 @@
   "private": true,
   "scripts": {
     "start": "quasar dev",
+    "dev": "quasar dev",
+    "build": "quasar build",
     "post-update": "yarn upgrade",
     "test": "echo \"No test specified\" && exit 0"
   },
