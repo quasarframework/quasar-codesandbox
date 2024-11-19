@@ -63,7 +63,6 @@ export default defineConfig((/* ctx */) => {
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
 
-
       // vitePlugins: [
       //   [ 'package-name', { ..pluginOptions.. }, { server: true, client: true } ]
       // ]
@@ -133,7 +132,6 @@ export default defineConfig((/* ctx */) => {
       pwa: false
 
       // pwaOfflineHtmlFilename: 'offline.html', // do NOT use index.html as name!
-                                                 // will mess up SSR
 
       // pwaExtendGenerateSWOptions (cfg) {},
       // pwaExtendInjectManifestOptions (cfg) {}
@@ -202,9 +200,7 @@ export default defineConfig((/* ctx */) => {
       // extendBexScriptsConf (esbuildConf) {},
       // extendBexManifestJson (json) {},
 
-      contentScripts: [
-        'my-content-script'
-      ]
+      extraScripts: []
     }
   }
 });
