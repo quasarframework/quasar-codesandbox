@@ -6,21 +6,22 @@
   "author": "add.your.email@here.com",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@8.15.6",
   "scripts": {
     "start": "quasar dev",
     "dev": "quasar dev",
     "build": "quasar build",
-    "post-update": "yarn upgrade",
+    "post-update": "pnpm up",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.16.4",
-    "quasar": "^2.16.0",
+    "@quasar/extras": "^1.16.13",
+    "quasar": "^2.17.4",
     "vue": "^3.4.18",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^2.0.0-beta.12",
+    "@quasar/app-vite": "^2.0.0-rc.2",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.14"
   },
