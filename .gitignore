@@ -2,6 +2,9 @@
 .thumbs.db
 node_modules
 
+# .env files
+.env*
+
 # Quasar core related directories
 .quasar
 /dist
@@ -21,13 +24,3 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# local .env files
-.env.local*
