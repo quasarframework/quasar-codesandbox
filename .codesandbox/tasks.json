@@ -11,7 +11,7 @@
   "tasks": {
     "install": {
       "name": "install dependencies",
-      "command": "pnpm install"
+      "command": "yarn install"
     },
 
     "dev": {

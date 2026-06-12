@@ -18,7 +18,7 @@
     "vue-router": "^5.0.6"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^3.0.0-rc.1"
+    "@quasar/app-vite": "^3.0.0-rc.2"
   },
   "keywords": [
     "quasar",
@@ -30,6 +30,6 @@
     "vuejs"
   ],
   "engines": {
-    "node": ">= 26 || ^24 || ^22.12"
+    "node": ">= 26 || ^24 || ^22.22.3"
   }
 }
