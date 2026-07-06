@@ -19,7 +19,7 @@
     "vue-router": "^5.0.6"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^3.0.0-rc.2"
+    "@quasar/app-vite": "^3.0.0"
   },
   "keywords": [
     "quasar",
